@@ -11,6 +11,9 @@
 		31D2EAA22BDD4666000D7225 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2EAA12BDD4666000D7225 /* ContentView.swift */; };
 		31D2EAA42BDD4668000D7225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31D2EAA32BDD4668000D7225 /* Assets.xcassets */; };
 		31D2EAA72BDD4668000D7225 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31D2EAA62BDD4668000D7225 /* Preview Assets.xcassets */; };
+		31D2EAB02BDD4784000D7225 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2EAAF2BDD4784000D7225 /* HomeView.swift */; };
+		31F3B3F02BDD720400FC106E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F3B3EF2BDD720400FC106E /* Note.swift */; };
+		31F3B3F22BDD807400FC106E /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F3B3F12BDD807400FC106E /* BlueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		31D2EAA32BDD4668000D7225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31D2EAA62BDD4668000D7225 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		31D2EAA82BDD4668000D7225 /* SamNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SamNotes.entitlements; sourceTree = "<group>"; };
+		31D2EAAF2BDD4784000D7225 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		31F3B3EF2BDD720400FC106E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		31F3B3F12BDD807400FC106E /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,8 @@
 		31D2EA9E2BDD4666000D7225 /* SamNotes */ = {
 			isa = PBXGroup;
 			children = (
+				31F3B3EE2BDD71F300FC106E /* Model */,
+				31D2EAAE2BDD476F000D7225 /* View */,
 				31D2EA9F2BDD4666000D7225 /* SamNotesApp.swift */,
 				31D2EAA12BDD4666000D7225 /* ContentView.swift */,
 				31D2EAA32BDD4668000D7225 /* Assets.xcassets */,
@@ -67,6 +75,23 @@
 				31D2EAA62BDD4668000D7225 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		31D2EAAE2BDD476F000D7225 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31D2EAAF2BDD4784000D7225 /* HomeView.swift */,
+				31F3B3F12BDD807400FC106E /* BlueView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31F3B3EE2BDD71F300FC106E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31F3B3EF2BDD720400FC106E /* Note.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D2EAB02BDD4784000D7225 /* HomeView.swift in Sources */,
 				31D2EAA22BDD4666000D7225 /* ContentView.swift in Sources */,
 				31D2EAA02BDD4666000D7225 /* SamNotesApp.swift in Sources */,
+				31F3B3F02BDD720400FC106E /* Note.swift in Sources */,
+				31F3B3F22BDD807400FC106E /* BlueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,15 +308,21 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.silvaneimartins.SamNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,15 +341,21 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.silvaneimartins.SamNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
